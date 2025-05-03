@@ -1,4 +1,5 @@
 # Loot Boxes 🎁
+![image](https://github.com/user-attachments/assets/a5f9aedc-fec7-404b-83d2-cc10a84e95f0)
 
 A visually engaging loot box unboxing spinner game. Spin the animated carousel to win a random tech gadget prize! Built with PixiJS for smooth, modern graphics.
 
