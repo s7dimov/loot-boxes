@@ -1,0 +1,13 @@
+{
+  "name": "loot-boxes",
+  "version": "1.0.0",
+  "description": "A loot box unboxing game using PixiJS",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server -c-1"
+  },
+  "dependencies": {
+    "pixi.js": "^7.3.2",
+    "http-server": "^14.1.1"
+  }
+} 

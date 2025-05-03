@@ -1,0 +1,171 @@
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(120deg, #181B23 60%, #23263A 100%);
+    font-family: 'Montserrat', Arial, sans-serif;
+    animation: bgmove 10s linear infinite alternate;
+}
+
+@keyframes bgmove {
+    0% { background-position: 0 0; }
+    100% { background-position: 100vw 100vh; }
+}
+
+#game-container {
+    width: 900px;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    border-radius: 18px;
+    background: rgba(24, 27, 35, 0.95);
+    margin: 0;
+}
+
+#button-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 0;
+    gap: 16px;
+}
+
+.main-btn, #spin-button {
+    padding: 18px 48px;
+    font-size: 22px;
+    font-weight: bold;
+    background: #FFC72C;
+    color: #181B23;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    transition: background 0.2s, color 0.2s, transform 0.1s;
+    font-family: 'Montserrat', Arial, sans-serif;
+}
+
+.main-btn:hover, #spin-button:hover {
+    background: #FFD84D;
+    transform: translateY(-2px) scale(1.04);
+}
+
+.secondary-btn, #demo-button {
+    padding: 18px 48px;
+    font-size: 22px;
+    font-weight: bold;
+    background: #23263A;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    transition: background 0.2s, color 0.2s, transform 0.1s;
+    font-family: 'Montserrat', Arial, sans-serif;
+}
+
+.secondary-btn:hover, #demo-button:hover {
+    background: #2e3147;
+    transform: translateY(-2px) scale(1.04);
+}
+
+#spin-button:disabled, #demo-button:disabled {
+    background: #bdbdbd;
+    color: #888;
+    cursor: not-allowed;
+}
+
+/* Optional: Add fade effect at carousel edges */
+#game-container::before, #game-container::after {
+    content: '';
+    position: absolute;
+    top: 0; bottom: 0;
+    width: 80px;
+    z-index: 2;
+    pointer-events: none;
+}
+#game-container::before {
+    left: 0;
+    background: linear-gradient(90deg, #181B23 80%, transparent);
+}
+#game-container::after {
+    right: 0;
+    background: linear-gradient(270deg, #181B23 80%, transparent);
+}
+
+/* Responsive design */
+@media (max-width: 1000px) {
+    #game-container {
+        width: 98vw;
+        min-width: 320px;
+    }
+}
+@media (max-width: 700px) {
+    #game-container {
+        width: 100vw;
+        min-width: 0;
+        border-radius: 0;
+        padding: 0;
+    }
+    .main-btn, .secondary-btn, #spin-button, #demo-button {
+        font-size: 16px;
+        padding: 12px 10px;
+        margin: 10px 4px 0 0;
+    }
+}
+
+/* 3D card look for carousel items (handled in PixiJS, but add drop shadow here for overlays if needed) */
+.pixi-card-glow {
+    box-shadow: 0 0 24px 8px #FFC72C99, 0 2px 8px #000a;
+    border-radius: 18px;
+    z-index: 10;
+}
+
+/* Confetti/particle effect */
+.confetti {
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    top: 0; left: 0; width: 100vw; height: 100vh;
+}
+
+.add-btn {
+    background: none;
+    border: none;
+    color: #6EC1E4;
+    font-size: 12px;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: normal;
+    margin-left: auto;
+    margin-right: 0;
+    padding: 0 8px;
+    cursor: pointer;
+    box-shadow: none;
+    transition: color 0.2s;
+    align-self: flex-end;
+}
+.add-btn:hover {
+    color: #FFC72C;
+    text-decoration: underline;
+}
+
+.main-title {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #FFC72C;
+    text-align: center;
+    margin-bottom: 18px;
+    margin-top: 32px;
+    letter-spacing: 2px;
+    text-shadow: 0 2px 12px #000a;
+} 
