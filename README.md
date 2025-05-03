@@ -39,4 +39,4 @@ A visually engaging loot box unboxing spinner game. Spin the animated carousel t
 - You can adjust spin speed, number of visible items, and more in the `config` object in `game.js`.
 
 ---
-Enjoy spinning and good luck! 🚀 #
+Enjoy spinning and good luck! 🚀 
