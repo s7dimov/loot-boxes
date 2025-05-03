@@ -37,8 +37,5 @@ A visually engaging loot box unboxing spinner game. Spin the animated carousel t
 - To change the prizes, edit the `basePrizes` array in `game.js`.
 - You can adjust spin speed, number of visible items, and more in the `config` object in `game.js`.
 
-## License
-MIT
-
 ---
 Enjoy spinning and good luck! 🚀 #
